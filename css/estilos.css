@@ -34,14 +34,16 @@ h2 {
     margin: 20px;
 }
 
-/* Pseudoclase: first-child  : Dentro de un conjunto de elementos estoy seleccionando el primero */   
+/* !Pseudoclase: first-child  :
+ Dentro de un conjunto de elementos estoy seleccionando el primero */   
 
 .parrafos p:first-child {
     color: blueviolet;
     font-weight: 700;
 }
 
-/* Pseudoclase: Last-child : Dentro de un conjunto de elementos estoy seleccionando el ultimo */
+/*! Pseudoclase: Last-child :
+ Dentro de un conjunto de elementos estoy seleccionando el ultimo */
 
 .parrafos p:last-child {
     color: crimson;
@@ -49,13 +51,87 @@ h2 {
 }
 
 
-/* Pseudoclase first-of-type */
+/* !Pseudoclase first-of-type  
+ ---> seria: dentro del papa "elementos" elijo el primero de los "p" (en este ejemplo es p, pero puedo elegir cualquier etiqueta dentro del contenedor ese que la idea es que elija el primero de la etiqueta que le pido.)*/  
+
+.elementos p:first-of-type {
+background-color: orange;
+}
 
 
 
+/*! Pseudoclase last-of-type */
+/* con este seria que me elija el ultimo de la etiqueta que le esto pidiendo (dentro de ese contenedor elementos) */
+
+.elementos p:last-of-type {
+    background-color: aquamarine;
+}
+
+.elementos div:last-of-type {
+    background-color: coral;
+}
 
 
-/* Pseudoclase last-of-type */
+/*! Pseudoclase nth-child */
+/* Dentro del contenedor que puse puedo elegir que etiqueta quiero que me edite (con el nro adentro del parentesis)  */
 
+
+.lista li:nth-child(2) {
+    background-color: deeppink;
+}
+
+/* Si quiero todos los pares ------> (2n / even) */
+
+.lista li:nth-child(2n) {
+    background-color: darkgoldenrod;
+}
+
+/* Si quiero todos los impares  ----->  (2n+1) / odd */
+
+.lista li:nth-child(2n+1) {
+    background-color: rgb(66, 184, 11);
+}
+
+/* Otro ejemplo: (3n) ---->  cada 3, pintame uno...  y asi puedo con 4n+1, etc */
+
+.lista li:nth-child(3n) {
+    background-color: crimson;
+}
+
+/*! Pseudoclase nth-last-child */
+/* Lo mismo pero al reves, cuenta desde el ultimo elemento para arriba */
+
+.lista li:nth-last-child(4n) {
+    background-color: darkviolet;
+}
+
+
+/*! Pseudoclase :nth-of-type() */
+/* Me deja elegir la etiqueta (por el nth-of-type) y tambien el nro para saber que etiqueta quiero editar (eso lo pongo en el parentesis) contando desde arriba para abajo */
+
+.lista-b p:nth-of-type(2) {
+    background-color: salmon;
+}
+
+.lista-b div:nth-of-type(2) {
+    background-color: lightseagreen;
+}
+
+
+/*! Pseudoclase :nth-last-of-type() */
+/* Lo mismo pero contando desde abajo para arriba */
+
+.lista-b div:nth-last-of-type(2) {
+    background-color: forestgreen;
+}
+
+/* DEMO */
+
+.lista-b p:nth-of-type(3),
+.lista-b span:nth-of-type(1),
+.lista-b div:nth-last-of-type(1) {
+    background-color: black;
+    color: white;
+}
 
 
