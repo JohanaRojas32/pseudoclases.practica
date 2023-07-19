@@ -10,4 +10,14 @@ body {
     justify-content: center;
 }
 
+.contenedor { 
+    width: 700px;
+    padding: 25px;
+    background-color: #aaa;  /* RRGGBB => RGB  =>  aaaaaa => aaa */
 
+}
+
+.grupo {
+    background-color: #eee;
+    margin: 20px;
+}
